@@ -119,7 +119,7 @@ export default class ParrotifyWeb extends Component<{}, IState> {
               class="mdl-textfield__input" type="text" onChange={ev => this.setText(ev)} value={text}></textarea>
           </div>
           <Card.Actions>
-            <Card.ActionButton raised ripple onClick={() => this.setPhoneNumberFromClipboard()}>Pasdte Phone Number</Card.ActionButton>
+            <Card.ActionButton raised ripple onClick={() => this.setPhoneNumberFromClipboard()}>Paste Phone Number</Card.ActionButton>
             <Card.ActionButton raised ripple onClick={() => this.setTextFromClipboard()}>Paste Text</Card.ActionButton>
           </Card.Actions>
         </Card>
