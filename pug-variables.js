@@ -1,6 +1,6 @@
 module.exports = {
-  coverImage: "https://junctionx-nbsp.github.io/parrot-it/icon.png",
-  title: "ParrotIt",
+  coverImage: "https://junctionx-nbsp.github.io/parrotify-web/icon.png",
+  title: "Parrotify",
   subtitle: "Raaaaar",
-  pageURL: "https://junctionx-nbsp.github.io/parrot-it"
+  pageURL: "https://junctionx-nbsp.github.io/parrotify-web"
 }

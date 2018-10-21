@@ -1,6 +1,6 @@
-# parrot-web
+# Parrotify-web
 
-[![Build Status](https://travis-ci.com/ltetzlaff/parrot-web.svg?branch=master)](https://travis-ci.com/ltetzlaff/parrot-web)
+[![Build Status](https://travis-ci.com/ltetzlaff/parrotify-web.svg?branch=master)](https://travis-ci.com/ltetzlaff/parrotify-web)
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 

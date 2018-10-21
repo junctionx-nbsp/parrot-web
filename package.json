@@ -1,5 +1,5 @@
 {
-  "name": "parrot-web",
+  "name": "parrotify-web",
   "version": "0.0.0",
   "description": "",
   "scripts": {
@@ -18,13 +18,15 @@
   "main": "dist/bundle",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ltetzlaff/parrot-web.git"
+    "url": "https://github.com/ltetzlaff/parrotify-web.git"
   },
   "author": "ltetzlaff",
   "license": "All rights reserved.",
   "dependencies": {
     "dom-loaded": "^1.0.1",
+    "improved": "^1.5.5",
     "preact": "^8.3.1",
+    "preact-material-components": "^1.5.3",
     "pug": "^2.0.3"
   },
   "devDependencies": {
