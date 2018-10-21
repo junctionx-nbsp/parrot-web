@@ -52,7 +52,7 @@ const config = (entry, outfile, node = false) => {
       }*/
     },
     plugins: [
-      new Dotenv(),
+      new Dotenv({ path: "./.env", systemvars: false }),
       ...(isProduction ? prodPlugins : []),
     ]
   }
