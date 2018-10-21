@@ -1,0 +1,19 @@
+#content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+div {
+  margin: 1.5rem;
+}
+
+.center {
+  display: block !important;
+  text-align: center;
+}
+
+.fill > * {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}

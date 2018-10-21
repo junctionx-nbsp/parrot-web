@@ -3,6 +3,14 @@ import subscribe from "../subscribe"
 import { IWebSocketPackage, ICallEvent } from "../types"
 import { read } from "../utils/clipboard"
 import Button from "preact-material-components/Button"
+import "preact-material-components/Button/style.css"
+import "preact-material-components/Theme/style.css"
+import Typography from "preact-material-components/Typography"
+import "preact-material-components/Typography/style.css"
+import Card from "preact-material-components/Card"
+import "preact-material-components/Card/style.css"
+import Fab from "preact-material-components/Fab"
+import "preact-material-components/Fab/style.css"
 
 interface IState {
   text: string
@@ -86,33 +94,37 @@ export default class ParrotifyWeb extends Component<{}, IState> {
     const { text } = this.state
     this.setState({ text: text + contents })
   }
-
+  // <Card.Media className="card-media" />
   public render() {
     const { phoneNumberValid, phoneNumber, text, inActiveCall } = this.state
     return (
-      <div>
-        <h1>Parrotify</h1>
-        <div>
-          <p>Phone Number</p>
-          <input
-            type="text"
-            onChange={ev => this.setPhoneNumber(ev)}
-            value={phoneNumber}
-          />
-          <Button onClick={() => this.setPhoneNumberFromClipboard()}>
-            Paste
-          </Button>
-          <p>Text Input</p>
-          <input type="text" onChange={ev => this.setText(ev)} value={text} />
-          <Button onClick={() => this.setTextFromClipboard()}>Paste</Button>
-          <Button
-            enabled={phoneNumberValid && inActiveCall}
-            onClick={() => this.sendToChat()}
-          >
-            Parrotify
-          </Button>
-        </div>
-      </div>
+      <div id="content">
+        <Card>
+          <div>
+            <Typography class="center" headline1>Parrotify</Typography>
+          </div>
+          <div class="fill">
+            <input
+              type="text"
+              placeholder="sip:+123456@example.com"
+              onChange={ev => this.setPhoneNumber(ev)}
+              value={phoneNumber}
+            />
+          </div>
+          <div class="fill">
+            <textarea
+              // @ts-ignore
+              multiline={true}
+              placeholder={"Text Input"}
+              class="mdl-textfield__input" type="text" onChange={ev => this.setText(ev)} value={text}></textarea>
+          </div>
+          <Card.Actions>
+            <Card.ActionButton raised ripple onClick={() => this.setPhoneNumberFromClipboard()}>Pasdte Phone Number</Card.ActionButton>
+            <Card.ActionButton raised ripple onClick={() => this.setTextFromClipboard()}>Paste Text</Card.ActionButton>
+          </Card.Actions>
+        </Card>
+        <Fab disabled={!phoneNumberValid && !inActiveCall} onClick={() => this.sendToChat()} ripple={true}>{/*}Fab.Icon>favorite_border</Fab.Icon><img src="./parrot.png" />*/"🐦"}</Fab>
+      </div >
     )
   }
 }
