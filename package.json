@@ -1,0 +1,46 @@
+{
+  "name": "parrot-web",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack --watch",
+    "buildOnce": "webpack",
+    "buildProd": "cross-env NODE_ENV=production webpack && node compile-markup.js",
+    "dev": "node dev-server.js",
+    "start": "npm run dev",
+    "lint": "tslint --format stylish --project .",
+    "prettier": "prettier --config node_modules/tslint-lt/.prettierrc.yml --write \"{,!node_modules/}**/*.{ts,tsx}\"",
+    "test": "npm run buildOnce && npm run lint && npm run prettier"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/bundle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ltetzlaff/parrot-web.git"
+  },
+  "author": "ltetzlaff",
+  "license": "All rights reserved.",
+  "dependencies": {
+    "dom-loaded": "^1.0.1",
+    "preact": "^8.3.1",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "dotenv-webpack": "^1.5.7",
+    "express": "^4.16.4",
+    "mini-css-extract-plugin": "^0.4.3",
+    "morgan": "^1.9.1",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "ts-loader": "^5.2.1",
+    "tslint-lt": "^1.7.3",
+    "typescript": "^3.1.3",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
